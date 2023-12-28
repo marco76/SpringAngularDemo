@@ -1,10 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {Component} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {AsyncPipe} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [HttpClientModule]
+  standalone: true,
+  imports: [
+    AsyncPipe
+  ]
 })
 export class AppComponent {
   constructor(private httpClient: HttpClient) {
