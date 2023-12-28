@@ -8,6 +8,13 @@ The artifact created is in this case a WAR that can be deployed in Servlet conta
 
 In the current implementation the frontend (Angular) works only if the application is deployed as ROOT context in Tomcat (aka as /).
 
+## Server path
+
 You can deploy as root renaming the WAR file in ROOT.war or changing the deployment configuration.
 
-I guess that the problem can be solved with a proxy or relative path in Angular, I have to investigate the issue.
+If the application doesn't run on `[server]/` but on '[server]/[AppName]/' you need to adapt the configuration for Angular.
+
+In the file `index.html` of Angular you need to specify the correct path or the frontend won't find the resources:
+
+Angular documentation: https://angular.io/guide/deployment#the-base-tag
+example `<base href="/AppName/">`

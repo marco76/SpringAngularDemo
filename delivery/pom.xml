@@ -47,6 +47,8 @@
                 <configuration>
                     <mainClass>dev.marco.demo.backend.SpringAngularDemoApplication</mainClass>
                     <skip>false</skip>
+                    <!-- If you rename in ROOT.war the deployment is done in the root '/' of the application server -->
+                    <!-- You have to adapt the href in the index.html of Angular to point to the correct path -->
                     <finalName>MyBeautifulApp-${project.version}</finalName>
                 </configuration>
             </plugin>
