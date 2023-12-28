@@ -9,6 +9,8 @@
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
+    <packaging>war</packaging>
+
     <artifactId>delivery</artifactId>
 
     <properties>
@@ -20,11 +22,13 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>frontend</artifactId>
             <version>${project.version}</version>
+            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>backend</artifactId>
             <version>${project.version}</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
     <build>
